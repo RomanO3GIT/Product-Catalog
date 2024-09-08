@@ -4,9 +4,13 @@ This project is a React-based e-commerce platform that allows users to browse th
 
 ## Technologies Used
 React
+
 React Router
+
 TypeScript
+
 SCSS
+
 Context API
 
 ## Link to Preview
