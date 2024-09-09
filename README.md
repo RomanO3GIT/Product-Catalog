@@ -11,7 +11,7 @@ TypeScript: Static typing for improved code quality and development experience
 
 SCSS Modules: Modular and scoped styling
 
-Context API or Redux: For state management of cart and favorites
+Context API: For state management of cart and favorites
 
 UI/UX Features: Smooth scrolling, hover effects, pagination, and product sliders
 
