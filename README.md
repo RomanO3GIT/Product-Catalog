@@ -1,17 +1,19 @@
 ## Product Catalog
 
-This project is a React-based e-commerce platform that allows users to browse through various products such as phones, tablets, and accessories. Users can view product details, add items to their favorites or cart, and navigate through different pages using React Router.
+This is a comprehensive e-commerce application built with React and TypeScript. It allows users to browse, search, and filter a product catalog, view product details, manage a shopping cart, and mark products as favorites. The app includes several pages for product categories such as phones, tablets, and accessories, and it implements advanced UI/UX features like smooth hover effects, dynamic image scaling, and responsive layouts. The application also utilizes local storage to persist user data for the cart and favorites across sessions.
 
 ## Technologies Used
-React
+React: Component-based architecture for building the UI
 
-React Router
+React Router: Navigation between different pages
 
-TypeScript
+TypeScript: Static typing for improved code quality and development experience
 
-SCSS
+SCSS Modules: Modular and scoped styling
 
-Context API
+Context API or Redux: For state management of cart and favorites
+
+UI/UX Features: Smooth scrolling, hover effects, pagination, and product sliders
 
 ## Link to Preview
 
