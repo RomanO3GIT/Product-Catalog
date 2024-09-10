@@ -46,7 +46,7 @@ export const FavouritesPage = () => {
           </section>
         </>
       ) : (
-        <h1>{`You didn't add any product with '${query}' yet`}</h1>
+        <h1>{`You didn't add any product with ${query} yet`}</h1>
       )}
     </div>
   );
