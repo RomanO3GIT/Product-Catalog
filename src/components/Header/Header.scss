@@ -35,7 +35,6 @@
         align-items: center;
         height: 100%;
 
-
         @include onTablet {
           gap: 50px;
         }
@@ -52,44 +51,29 @@
             @include linkNav;
             display: flex;
             align-items: center;
-            height: 60px;
+            height: 62px;
+            position: relative;
 
-
-            &:hover {
-              transition: $effect-duration;
-            }
-
+            // Immediate underline for active state
             &::after {
               content: "";
               height: 3px;
               width: 100%;
-              top: 39px;
-              left: 0;
               position: absolute;
+              bottom: 0;
+              left: 0;
               background-color: $color-primary;
-
-              transition: transform $effect-duration;
-              transform: scale(0);
-              transform-origin: center;
+              transform: scaleX(0); // Start with 0 width
+              transform-origin: bottom left;
+              transition: none; // No transition
             }
 
-            &:hover::after {
-              @include hover(transform, scale($scale));
-            }
-
+            // Underline for active links
             &--active {
               color: $color-primary;
 
-
               &::after {
-                content: "";
-                height: 3px;
-                width: 100%;
-                top: 39px;
-                left: 0;
-                position: absolute;
-                background-color: $color-primary;
-                transform: scale($scale);
+                transform: scaleX(1); // Full width for active links
               }
             }
           }
@@ -142,7 +126,7 @@
         cursor: pointer;
 
         &:hover {
-          @include hover (transform, scale(1.1));
+          @include hover(transform, scale(1.1));
         }
       }
 
@@ -197,27 +181,17 @@
               position: absolute;
               background-color: $color-primary;
 
-              transition: transform $effect-duration;
-              transform: scale(0);
-              transform-origin: center;
+              transition: none; // No transition
+              transform: scaleX(0); // Start with 0 width
+              transform-origin: bottom left;
             }
 
-            &:hover::after {
-              @include hover (transform, scale($scale));
-            }
-
+            // Underline for active links
             &--active {
               color: $color-primary;
 
               &::after {
-                content: "";
-                height: 3px;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-                position: absolute;
-                background-color: $color-primary;
-                transform: scale($scale);
+                transform: scaleX(1); // Full width for active links
               }
             }
           }
@@ -247,5 +221,3 @@
     }
   }
 }
-
-;
