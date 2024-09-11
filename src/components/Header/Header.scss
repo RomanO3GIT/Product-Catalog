@@ -28,13 +28,14 @@
 
     &__navigation {
       height: 100%;
+
       &--list {
         @include listNav;
         display: flex;
         align-items: center;
         height: 100%;
-        
-        
+
+
         @include onTablet {
           gap: 50px;
         }
@@ -51,8 +52,7 @@
             @include linkNav;
             display: flex;
             align-items: center;
-            height: 23px;
-            line-height: 1.5;
+            height: 60px;
 
 
             &:hover {
@@ -79,6 +79,7 @@
 
             &--active {
               color: $color-primary;
+
 
               &::after {
                 content: "";
