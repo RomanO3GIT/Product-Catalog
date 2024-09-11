@@ -2,9 +2,9 @@
 
 .header {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  height: 48px;
+  height: 100%;
   border-bottom: 1px solid $color-elements;
   position: sticky;
   top: 0;
@@ -18,6 +18,8 @@
   &__left-side {
     display: flex;
     flex-direction: row;
+    height: 100%;
+    align-items: stretch;
     margin: 14px 16px;
 
     @include onDesktop {
@@ -25,21 +27,33 @@
     }
 
     &__navigation {
+      height: 100%;
       &--list {
         @include listNav;
-
+        display: flex;
+        align-items: center;
+        height: 100%;
+        
+        
         @include onTablet {
-          gap: 32px;
+          gap: 50px;
         }
       }
 
       &--item {
-        display: none;
+        display: flex;
+        align-items: stretch;
 
         @include onTablet {
-          display: block;
+          display: flex;
+
           &--link {
             @include linkNav;
+            display: flex;
+            align-items: center;
+            height: 23px;
+            line-height: 1.5;
+
 
             &:hover {
               transition: $effect-duration;
@@ -231,4 +245,6 @@
       }
     }
   }
-};
+}
+
+;
