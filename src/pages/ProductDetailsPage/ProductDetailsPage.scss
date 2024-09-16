@@ -14,6 +14,7 @@
   @include onDesktop {
     margin-block: 24px 80px;
   }
+
   &__container {
     margin-inline: 16px;
 
@@ -73,7 +74,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 100px;
 
     @include onTablet {
       gap: 40px;
@@ -235,16 +236,16 @@
         gap: 16px;
       }
 
-    &--mobile {
-      display: flex;
-      flex-direction: row;
-      gap: 8px;
-      margin-bottom: 40px;
+      &--mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        margin-bottom: 40px;
 
-      @include onTablet {
-        display: none;
+        @include onTablet {
+          display: none;
+        }
       }
-    }
 
       &--buttons {
         width: 80px;
@@ -403,7 +404,7 @@
           @include onTablet {
             font-size: 32px;
             font-weight: 800;
-            line-height:  41px;
+            line-height: 41px;
             letter-spacing: -1%;
           }
 
@@ -499,6 +500,7 @@
     &--id {
       display: none;
 
+
       @include onTablet {
         display: flex;
       }
@@ -507,18 +509,22 @@
         margin-left: 145px;
       }
 
-    &--mobile {
-      display: flex;
+      &--mobile {
+        display: flex;
 
-      @include onTablet {
-        display: none;
+        @include onTablet {
+          display: none;
+        }
       }
-    }
 
 
       &--text {
         color: $color-icons;
+        display: flex;
+        white-space: nowrap;
       }
     }
   }
-};
+}
+
+;
