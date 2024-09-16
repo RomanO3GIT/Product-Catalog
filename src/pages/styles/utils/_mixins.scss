@@ -23,10 +23,12 @@
 .container {
   justify-content: center;
   display: flex;
+  flex-wrap: wrap; // Ensure items wrap if they don't fit
   margin: 0 auto;
   overflow: hidden;
   min-height: 83vh;
 
+  
   @include onTablet {
     width: 592px;
   }
@@ -40,8 +42,6 @@
   display: flex;
   flex-direction: row;
   gap: 64px;
-  
-
 }
 
 @mixin linkNav {
@@ -56,7 +56,6 @@
 
 @mixin logo {
   transition: transform $effect-duration;
-  
 
   &:hover {
     @include hover(transform, scale(1.1));

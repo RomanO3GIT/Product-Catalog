@@ -76,12 +76,6 @@ export const Header = () => {
 
   const favourites = products.filter(item => item.addedToFavourites === true);
   const carts = products.filter(item => item.addedToCart === true);
-  const itemQuantities = carts.map(p => p.quantity);
-  let itemCount = 0;
-
-  for (const quantity of itemQuantities) {
-    itemCount += quantity;
-  }
 
   const debouncedQuery = useMemo(
     () =>
@@ -212,7 +206,7 @@ export const Header = () => {
 
             {!!carts.length && (
               <div className="header__right-side__icon__counter">
-                {itemCount}
+                {carts.length}
               </div>
             )}
           </NavLink>
