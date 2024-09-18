@@ -23,12 +23,10 @@
 .container {
   justify-content: center;
   display: flex;
-  flex-wrap: wrap; // Ensure items wrap if they don't fit
   margin: 0 auto;
   overflow: hidden;
   min-height: 83vh;
 
-  
   @include onTablet {
     width: 592px;
   }

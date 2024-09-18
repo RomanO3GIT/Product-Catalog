@@ -3,6 +3,7 @@
 .header {
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: space-between;
   height: 48px;
   border-bottom: 1px solid $color-elements;
@@ -18,35 +19,36 @@
   &__left-side {
     display: flex;
     flex-direction: row;
-    margin: 0; /* Remove margin to align with header */
-    height: 100%; /* Ensure left-side takes full height of header */
-    align-items: center; /* Center items vertically within header */
+    margin: 0;
+    height: 100%;
+    align-items: center;
 
     @include onDesktop {
-      margin: 0 24px; /* Adjust margin for desktop view */
+      margin: 0 24px;
     }
 
     &__navigation {
       display: flex;
-      align-items: center; /* Center items vertically */
-      height: 100%; /* Ensure navigation takes full height */
-      margin: 0; /* Remove margin to fit within header */
+      align-items: center;
+      height: 100%;
+      margin: 0;
 
       &--logo {
         @include logo;
-        height: 100%; /* Ensure logo takes full height */
+        height: 100%;
         display: flex;
-        align-items: center; /* Center logo vertically */
+        align-items: center;
         margin-right: 20px;
-         /* Space between logo and navigation */
+        padding: 20px;
+
       }
 
       &--list {
         @include listNav;
         display: flex;
         flex-direction: row;
-        align-items: center; /* Ensure list items are centered vertically */
-        height: 100%; /* Ensure the list takes full height */
+        align-items: center;
+        height: 100%;
         margin: 0;
         padding: 0;
 
@@ -60,17 +62,17 @@
 
         @include onTablet {
           display: flex;
-          align-items: center; /* Center items vertically */
-          height: 100%; /* Ensure each item stretches to full height */
-          position: relative; /* Required for pseudo-element positioning */
+          align-items: center;
+          height: 100%;
+          position: relative;
 
           &--link {
             @include linkNav;
             display: flex;
-            align-items: center; /* Center text vertically inside link */
-            height: 100%; /* Ensure link takes full height */
-            padding: 0 10px; /* Adjust padding as needed */
-            position: relative; /* Required for pseudo-element positioning */
+            align-items: center;
+            height: 100%;
+            padding: 0 10px;
+            position: relative;
 
             &:hover {
               transition: $effect-duration;
@@ -80,17 +82,17 @@
               content: "";
               height: 3px;
               width: 100%;
-              bottom: 0; /* Position at the bottom of the link */
+              bottom: 0;
               left: 0;
               position: absolute;
               background-color: $color-primary;
-              transform: scale(0); /* Hidden by default */
+              transform: scale(0);
               transform-origin: center;
               transition: transform $effect-duration;
             }
 
             &--active {
-              color: $color-primary; /* Active link color */
+              color: $color-primary;
 
               &::after {
                 content: "";
@@ -100,7 +102,7 @@
                 left: 0;
                 position: absolute;
                 background-color: $color-primary;
-                transform: scale(1); /* Show underline */
+                transform: scale(1);
               }
             }
           }
@@ -204,7 +206,8 @@
               background-color: $color-primary;
 
               transition: transform $effect-duration;
-              transform: scale(0); /* Hidden by default */
+              transform: scale(0);
+              /* Hidden by default */
               transform-origin: center;
             }
 
@@ -223,7 +226,7 @@
                 left: 0;
                 position: absolute;
                 background-color: $color-primary;
-                transform: scale($scale); /* Show underline */
+                transform: scale($scale);
               }
             }
           }
